@@ -1,17 +1,21 @@
-#include <iostream>
+#include <iostream>  // Needed for std::cin and std::cout
 
 int main()
 {
-    int x = {5}; 
-    std::cout <<"x is equal to: " << x<< std::endl ; 
-    std::cout << "Hi! Its me" << std::endl << "Goku!\n"; 
-    std::cout << "You are a fool "<< '\n' << "Kakarot\n"; // this is the way
-    std::cout << "Hello MONKEYS!!!!\nFrieza\n" ; // or this 
+    std::cout << "Yo! Can you enter 3 values?\n";
+    int num1 {}; 
+    std::cin >> num1; 
 
-    std::cout << "Get the Number: "; 
-    int num{}; 
-    std::cin >> num; // get the num from keyboard and store it in x 
-    
-    std::cout << "You entered " << num << '\n'; 
+    int num2 {}; 
+    std::cin >> num2; 
+
+    int num3 {}; 
+    std::cin >> num3;
+
+    std::cout << "You entered:\n"
+              << num1 << '\n' 
+              << num2 << '\n' 
+              << num3 << '\n';
+
     return 0;
 }
