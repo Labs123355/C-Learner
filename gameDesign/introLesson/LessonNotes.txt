@@ -1,0 +1,81 @@
+
+* SourceCode & Header file --> Pre-processor output --> Object files are       created --> object files --> linked together --> Execuatable file is created 
+
+* g++ myprog.cpp //is this whole process
+* Produces execuatble file: a.out 
+
+We should use to sepcify execution name
+*g++ myprog.cpp -o myprg 
+then run 
+*./myprog
+
+View result of preprocess 
+*g++ -E myprog.cpp > myprog.s
+
+Compile to an object file with -c FOR BIGGER PROGRAMS 
+*g++ -c myprog.c
+produces object file myprog.o
+
+Objects are then linked to single executable 
+*g++ -o myprog myprog1.o myprog2.o
+
+
+cand do all this with makefile 
+
+Linking is much faster than compiling 
+
+* #include <library> //include library
+* #include "specificfile.h" 
+* #difine Limit 100 // macros *DANGEROUS 
+* #difine Area(L,W) (L*W) 
+
+
+Header Files (.h) --> class/function declaration
+
+
+#include "MyClass.h" 
+
+void myFunction()
+{
+    MyClass c; 
+    c.doSomething();
+} 
+
+* Header Files allow you to see class functionality at a glance (reduces cognitive load) 
+* Sucks because more files in code base
+
+
+functions 
+* returnType funcName(args) { logic; }
+
+
+class Point 
+{   // m is a private member variable difference btw local and scope
+    int m_x = 0; //private 
+    int m_y = 0; 
+public: 
+    Point(int x, int y); 
+    int getX();
+    int getY(); 
+};
+
+Class Constructor 
+Point::Point (int x, int y) 
+{ 
+    m_x = x;
+    m_y = y; 
+}
+
+Better to 
+Point::Point(int x, int y)
+    :m_x (x) //intialiser list
+    ,m_y (y) 
+{
+}
+
+Class Destructor 
+Point::~Point()
+{
+ // clean-up here 
+} 
+
