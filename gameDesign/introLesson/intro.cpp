@@ -40,7 +40,7 @@ public:
     void print()
     {
         std::cout << m_first << " " << m_last << " "; 
-        std::cout << m_id << " " << "\n";
+        std::cout << m_id << " " << m_avg <<"\n";
     }
 };
 
