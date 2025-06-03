@@ -3,22 +3,31 @@
 
 class Student
 {
+private: //  internal stuff (only the class itself can touch it)
     std::string m_first = "First";
     std::string m_last = "Last";
     int         m_id   = 0; 
     float       m_avg  = 0; 
 
+/*Function header = What toppings you want
 
-public:
-    // constructor takes in everthing
-    Student() {} // default constructor for if i ever construct?
+: initializer list = Building your pizza with those toppings right away
+
+{} = You might add extra sauce or slice it when it comes out of the oven*/
+
+
+public: // safe-to-use buttons and functions (other code outside the class can access)
+    // constructor takes in everthing (parameters) 
+    Student() {} // default constructor for if i ever construct? do nothing
 
     Student(std::string first, std::string last, int id, float avg )
-        : m_first  (first)
-        , m_last   (last)
-        , m_id     (id)
-        , m_avg    (avg)
+    /* " : " means:
+       Before we even step into the constructor body {}, 
+       go ahead and initialize each member variable using these values.” 
+    */
+        : m_first (first), m_last (last), m_id (id) , m_avg (avg) // i.e m_first = first
     {
+
     }
     int getAvg()
     {
@@ -84,7 +93,7 @@ void school()
 {
     Student s1; 
     Student s2("Dave", "Churchhill", 1, 3.14); 
-    Student s3("Jane", "Doe", 2022000001, 99.9); 
+    const Student s3("Jane", "Doe", 2022000001, 99.9); 
 
     s3.print();
 
