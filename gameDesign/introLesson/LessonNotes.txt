@@ -3,7 +3,7 @@
 
 * g++ myprog.cpp //is this whole process
 * Produces execuatble file: a.out 
-
+--------------------------------------------------------------------------------------
 We should use to sepcify execution name
 *g++ myprog.cpp -o myprg 
 then run 
@@ -29,7 +29,7 @@ Linking is much faster than compiling
 * #difine Limit 100 // macros *DANGEROUS 
 * #difine Area(L,W) (L*W) 
 
-
+_--------------------------------------------------------------
 Header Files (.h) --> class/function declaration
 
 
