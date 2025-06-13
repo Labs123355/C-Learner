@@ -1,0 +1,5 @@
+** Pointers are var that store address of anoter variable. 
+	a= 4 at location 204. P(Pointer) = location 204
+** int a; 
+   int *p; 
+   p = &a; //gives us the address of that paticular variable  
