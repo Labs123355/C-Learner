@@ -1,5 +1,6 @@
 #include <iostream>
-
+// TODO: Understand pointers and refrences 
+// Undersatnd how pointers work and refrences 
 // we want to pass a & or * so we actually get the memory adrees
 void pp(int & i)  
 {    // give me the memory address where stored
